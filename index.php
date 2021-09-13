@@ -7,15 +7,18 @@
     require_once 'db/conexion.php';
     $db = new DBClass();
     $conexion  = $db->getconnection();
+    $sql = "select * from clientes";
+    $stmt = $conexion->prepare($sql);
+    $resultado = $stmt->execute();
     //Cargar el controlador correspondiente y cargar la accion por GET
     if(isset($_GET['c'])){
         $controller = loadController($_GET['c']);
         if(isset($_GET['a'])){
-            loadAction($controller, $_GET['a'], $conexion, $_SESSION['cod_empresa']);
+            loadAction($controller, $_GET['a'], $conexion);
         }else{
-            loadAction($controller, ACTION_MAIN, $conexion, $_SESSION['cod_empresa']);
+            loadAction($controller, ACTION_MAIN, $conexion);
         }
     }else{
         $controller = loadController(CONTROLLER_MAIN);
-        loadAction($controller, ACTION_MAIN, $conexion, $_SESSION['cod_empresa']);
+        loadAction($controller, ACTION_MAIN, $conexion);
     }
