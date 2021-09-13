@@ -1,0 +1,47 @@
+ .tamaniofoto{
+      width: 20px;
+      height: 20px;
+    }
+    .tamanio{
+      width: 250px;
+      height: 250px;
+    }
+    .temp{
+      width: 111px;
+      height: 23px;      
+    }
+    .sombra {
+    border-radius: 15px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.18);
+}
+.bg-primary {
+  background-image: url("../img/logo4.jpg");
+ }
+        .mimodal{
+            margin: 0;
+            padding: 10px;
+            bottom: 10px;
+            background: rgba(221, 20, 20, 0.5);
+
+        }
+        .borde{
+            border: solid 1px;
+            border-radius: 50px;
+            padding-top: 5px;
+        }
+        .sinborde {
+            background-color: #eee;
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+}
+form{
+    border: solid;
+    padding: 20px;
+}
+
+.button1 {
+    outline-style: none;
+    border: none;
+    outline: none;
+}
