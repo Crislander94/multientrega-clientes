@@ -10,6 +10,8 @@
     <link href="css_/estilosIndex.css"rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css_/adminlte.min.css">
     <link rel="stylesheet" href="css_/estilosIndex.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <style type="text/css">
         body { 
             background: url("..img/logo4.jpg")   rgb(249,249,249); 
@@ -30,12 +32,15 @@
     </ul>     
     <ul class="navbar-nav ml-auto">         
       <li class="nav-item"> 
-        <li>
-          <img src="img/dire.PNG" style="width: 40px; height: 40px;"  alt="">
-          <button id="btndir" style="margin-left:50px; border-radius: 10px;" onclick="direccion()">Agregar Dirección</button>   
-        </li>       
+        <?php  if(isset($_SESSION["usernamex"])) :?>
+          <a href="index.php?c=cliente&a=tracking" class="btn btn-success">Seguimiento de mis pedidos</a>
+          <a href="login/cerrar-sesion.php" class="btn btn-info">Cerrar Sesion</a>
+        <?php else: ?>
+          <a href="login/index.php" class="btn btn-primary">Iniciar Sesion</a>
+        <?php endif;?>
+
+      </li>
   <div>   
-    <label for="user1"id="username" readonly></label>
   </div>
       </li>
     </ul>

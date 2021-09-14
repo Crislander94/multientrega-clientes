@@ -1,6 +1,5 @@
 <?php 
-    session_start();
-    if(!isset($_SESSION['username'])){
+    if(!isset($_SESSION['usernamex'])){
         header("Location: ./login/index.php");
     }
 ?>

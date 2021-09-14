@@ -3,7 +3,6 @@
         $name_controller = ucwords($controller).'Controller';   
         $fileController = 'controller/'.$name_controller.'.php';
         if(!is_file($fileController)){
-            $fileController = 'controller/'.CONTROLLER_MAIN.'Controller.php';
             header('Location: index.php');
         }
         //Cargamos el controlador

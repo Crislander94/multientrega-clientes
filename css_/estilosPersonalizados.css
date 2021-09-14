@@ -55,3 +55,33 @@ padding: 8px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.select_custom_styles{
+  background-color: #f2f2f2;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+.title_main{
+  margin-top: 30px;
+  color:#121212;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 1px 8px rgba(0, 0, 0, .7);
+}
+.list-menu{
+  cursor:pointer;
+  font-size: 20px;
+  transition: background-color .3s ease, color .3s ease;
+}
+.list-menu:hover{
+  color:#fff;
+  background-color: #7a5612;
+}
+.sidebar-collapse .wrapper .main-sidebar h3{opacity: 0;}
+.sidebar-collapse .wrapper .main-sidebar a{opacity: 0;}
+.sidebar-collapse .wrapper .main-sidebar .sidebar p span{opacity: 0;} 
+.sidebar-collapse .wrapper .main-sidebar:hover .sidebar p span{opacity: 1;}
+.sidebar-collapse .wrapper .main-sidebar:hover a{opacity: 1;}
+.sidebar-mini .wrapper .main-sidebar .sidebar{overflow-x: hidden;}
