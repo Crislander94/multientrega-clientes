@@ -29,9 +29,9 @@
             ?>
         </div>
     <?php else: ?>
-        <p style="position:relative" class="p-3 mb-0 list-menu">
-            <i class="fas fa-question"></i>
-            <span style="position:absolute; left:48px;">Generando pedido</span>
-        </p>
+        <a style="position:relative; display:inline-block; width:100%" href="<?php echo RUTA.'index.php' ?>" class="p-3 mb-0 list-menu">
+            <i class="fas fa-home mr-3"></i>
+            <span style="position:absolute; left:48px;">Productos</span>
+        </a>
     <?php  endif; ?>
   </aside>

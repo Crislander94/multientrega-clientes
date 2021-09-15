@@ -1,4 +1,48 @@
 <div class="content-wrapper">
+    <?php if(isset($_SESSION['error_payment'])) : ?>
+        <div class="alert col-12 alert-danger alert-dismissible fade show mx-auto mb-4 w-50" role="alert">
+            Logueese o verifique su forma de pago.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php
+        unset($_SESSION['error_payment']);
+        endif; 
+    ?>
+    <?php if(isset($_SESSION['success_resenia'])) : ?>
+        <div class="alert col-12 alert-success alert-dismissible fade show mx-auto mb-4 w-50" role="alert">
+            Su orden y la calificacion se realizaron exitosamente.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php
+        unset($_SESSION['success_resenia']);
+        endif; 
+    ?>
+    <?php if(isset($_SESSION['error_resenia'])) : ?>
+        <div class="alert col-12 alert-danger alert-dismissible fade show mx-auto mb-4 w-50" role="alert">
+            Error! no se guardo la calificacion a nuestro servicios.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php
+        unset($_SESSION['error_resenia']);
+        endif; 
+    ?>
+    <?php if(isset($_SESSION['error_order'])) : ?>
+        <div class="alert col-12 alert-danger alert-dismissible fade show mx-auto mb-4 w-50" role="alert">
+            !Error! No se pudo generar el pedido.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php
+        unset($_SESSION['error_order']);
+        endif; 
+    ?>
     <section class="p-4" >  
         <h2 class="text-center title_main mb-4" id="title_main_products">Lista de Productos</h2>
         <div class="row" id="listProducts">

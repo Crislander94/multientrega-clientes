@@ -70,7 +70,7 @@ const getProductsByCategory = (element) => {
 const renderProducts = (nom_producto, ruta_img, precio, ofertas, cod_empresa, cod_producto) => {
     let tmp_ofertas = '';
     
-    if(ofertas !== 0){
+    if(ofertas !== '0'){
         const descuento = ((parseFloat(precio) * parseFloat(ofertas))/100).toFixed(2);
         const precio_final = (parseFloat(precio) - descuento).toFixed(2);
         tmp_ofertas = `<p class="mb-0 text-bold">${nom_producto}</p>
@@ -89,11 +89,11 @@ const renderProducts = (nom_producto, ruta_img, precio, ofertas, cod_empresa, co
                     </div>
                     <div class="card-footer text-muted d-flex justify-content-end">
                         <form action="index.php?c=cliente&a=generatePedido" class="p-0" style="border:none" method="POST">
-                            <input type="text" id="cod_empresa" name="cod_empresa" value=${cod_empresa}>
-                            <input type="text" id="cod_producto" name="cod_producto" value=${cod_producto}>
-                            <input type="text" id="precio" name="precio" value=${precio}>
-                            <input type="text" id="oferta" name="oferta" value=${ofertas}>
-                            <input type="text" id="nom_producto" name="nom_producto" value=${nom_producto}>
+                            <input type="hidden" id="cod_empresa" name="cod_empresax" value=${cod_empresa}>
+                            <input type="hidden" id="cod_producto" name="cod_producto" value=${cod_producto}>
+                            <input type="hidden" id="precio" name="precio" value=${precio}>
+                            <input type="hidden" id="oferta" name="oferta" value=${ofertas}>
+                            <input type="hidden" id="nom_producto" name="nom_producto" value=${nom_producto}>
                             <button type="submit" class="btn btn-info">Comprar</button>
                         </form>
                     </div>

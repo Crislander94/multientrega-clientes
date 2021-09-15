@@ -10,5 +10,11 @@
 <script src="js/libs/bootstrap.bundle.min.js"></script>
 <script src="js/libs/adminlte.min.js"></script>
 <script src="js/libs/demo.js"></script>
+  <!-- INICIALIZANDO LOS TOOLTIPS -->
+  <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
 </body>
 </html>
