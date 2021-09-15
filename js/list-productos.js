@@ -89,11 +89,11 @@ const renderProducts = (nom_producto, ruta_img, precio, ofertas, cod_empresa, co
                     </div>
                     <div class="card-footer text-muted d-flex justify-content-end">
                         <form action="index.php?c=cliente&a=generatePedido" class="p-0" style="border:none" method="POST">
-                            <input type="hidden" id="cod_empresa" name="cod_empresa" value=${cod_empresa}>
-                            <input type="hidden" id="cod_producto" name="cod_producto" value=${cod_producto}>
-                            <input type="hidden" id="precio" name="precio" value=${precio}>
-                            <input type="hidden" id="oferta" name="oferta" value=${ofertas}>
-                            <input type="hidden" id="nom_producto" name="nom_producto" value=${nom_producto}>
+                            <input type="text" id="cod_empresa" name="cod_empresa" value=${cod_empresa}>
+                            <input type="text" id="cod_producto" name="cod_producto" value=${cod_producto}>
+                            <input type="text" id="precio" name="precio" value=${precio}>
+                            <input type="text" id="oferta" name="oferta" value=${ofertas}>
+                            <input type="text" id="nom_producto" name="nom_producto" value=${nom_producto}>
                             <button type="submit" class="btn btn-info">Comprar</button>
                         </form>
                     </div>
