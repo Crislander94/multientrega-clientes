@@ -78,6 +78,7 @@
                         when 'F' then 'Completado'
                         when 'A' then 'Generado'
                         when 'C' then 'Canelación Pendiente'
+                        when 'E' then 'En curso'
                     end as estado,
                     case p.st_pedido  
                         when 'P' then 'info'
@@ -85,6 +86,7 @@
                         when 'F' then 'success'
                         when 'A' then 'primary'
                         when 'C' then 'warning'
+                        when 'E' then 'success'
                     end as color_estado
                     from pedidos p
                     inner join productos pr on pr.id = p.producto
