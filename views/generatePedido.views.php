@@ -38,10 +38,7 @@
                     <label for="">Tu Direccion: </label>
                     <input type="text" class="form-control" value="<?php echo $direccion; ?>" disabled>
                 </div>
-                <div class="form-group mb-3" id="direccion_nueva">
-                    <label for="">Nueva Direccion</label>
-                    <input type="text" class="form-control">
-                </div>
+                <div id="direccion"></div>
                 <input type="hidden" class="form-control" value="<?php echo $cod_empresa ?>" name="cod_empresa">
                 <input type="hidden" class="form-control" value="<?php echo $cod_producto ?>" name="cod_producto">
                 <input type="hidden" class="form-control" value="<?php echo $cod_cliente ?>" name="cod_cliente">
@@ -60,13 +57,11 @@
 <script>
     const validarSeleccion  = (element) =>{
         const direccion_actual = document.getElementById('direccion_actual');
-        const direccion_nueva = document.getElementById('direccion_nueva');
         if(element.value === 'S'){
             direccion_actual.style.display ="none";
-            direccion_nueva.style.display ="block";
+            direccion();
         } 
         if(element.value === 'N'){
-            direccion_nueva.style.display ="none";
             direccion_actual.style.display ="block";
         } 
     }
@@ -74,3 +69,8 @@
 </script>
 <script src="js/generar-pedido.js"></script>
 <?php include_once 'partials/footer.php'; ?>
+<script>
+    function direccion() {
+        $('#direccion').html('<form action="" id=><div class="col borde"><div class="col" style="color: tomato;"><label class="col-sm-1 control-label"><b>Direcci&oacute;n</b></label></div><div class="col mt-2" style="padding: 8px;"><input class="sinborde" type="text" placeholder="Ingresar Direcci&oacute;n" /></div></div><br /><div class="col borde"><div class="col mt-2" style="color: tomato;"><label class="col-sm-1 cotrol-label"> <b>Piso/Oficina/Apto/Depto</b></label></div><div class="col mt-2"></div><div class="col mt-2" style="margin: 4px;"><input class="sinborde" type="text" placeholder="Descripci&oacute;n" /></div></div><br /><iframe height="300" style="border: 0; width:100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255168.25640204886!2d-80.12019029593307!3d-2.1521517080089017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13cbe855805f%3A0x8015a492f4fca473!2sGuayaquil!5e0!3m2!1ses!2sec!4v1626974687202!5m2!1ses!2sec" allowfullscreen="allowfullscreen" loading="lazy"></iframe> <br /><br /></form>');  
+    }
+</script>
