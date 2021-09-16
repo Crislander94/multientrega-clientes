@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2021 a las 06:27:00
+-- Tiempo de generación: 16-09-2021 a las 06:33:34
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -76,7 +76,7 @@ INSERT INTO `clientes` (`cod_cliente`, `nombres`, `password`, `direccion`, `iden
 (5, 'Cliente5', '12345', 'xxxxx', '0943836463', 'correo7@correo.com', '0943836478', 'Visa', '2021-09-07 12:31:59', 'A'),
 (6, 'Cliente6', '12345', 'xxxxx', '0943836479', 'correo8@correo.com', '0943836478', 'Visa', '2021-09-07 12:31:59', 'X'),
 (7, 'Cliente7', '12345', 'xxxxx', '0943836560', 'correo9@correo.com', '0943836478', 'Visa', '2021-09-07 12:31:59', 'P'),
-(13, 'Cristhian Baidal', '12345', 'nueva direccion', '0943836477', 'cristhian@gmail.com', '0999999', 'Visa', '2021-09-13 19:11:11', 'A'),
+(13, 'Cinthya Andrade', '12345', 'nueva direccion', '0943836477', 'cinthya@gmail.com', '0999999', 'Visa', '2021-09-13 19:11:11', 'A'),
 (15, 'Cristhian12415', '12345', 'xxxxx', '0948787878', 'correo2@gmail.com', '025454545', 'MasterCard', '2021-09-14 20:13:57', 'A'),
 (16, 'Cliente8', '12345', 'xxxxx', '094383555', 'correo12@correo.com', '0943836478', 'Visa', '2021-09-14 23:11:11', 'P'),
 (17, 'Cliente9', '12345', 'xxxxx', '0943836666', 'correo13@correo.com', '0943836478', 'Visa', '2021-09-14 23:11:11', 'P'),
