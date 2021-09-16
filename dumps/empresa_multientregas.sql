@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2021 a las 06:33:34
+-- Tiempo de generación: 16-09-2021 a las 23:57:56
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -216,7 +216,7 @@ CREATE TABLE `pedidos` (
 INSERT INTO `pedidos` (`id`, `producto`, `cliente`, `cod_empresa`, `cod_repartidor`, `fecha_envio`, `fecha_cancelacion`, `precio`, `ganancia_repartidor`, `ganancia_empresa`, `ganancia_web`, `motivo_cancelacion`, `st_pedido`, `created_at`, `created_by`, `edited_at`, `edited_by`) VALUES
 (1, 3, 1, 1, 1, '2021-09-09 15:40:30', '2021-09-11 02:48:55', '10.56', '3.17', '6.33', '1.06', 'Falta información', 'X', '2021-09-09 21:40:52', 1, NULL, NULL),
 (2, 5, 1, 1, 3, '2021-09-09 16:45:30', '2021-09-11 02:49:22', '200.00', '60.00', '120.00', '20.00', 'El cliente no puede adquirir nuestros productos. Se procedera a betarlo del sistema.', 'F', '2021-09-09 21:40:52', 1, NULL, NULL),
-(3, 6, 1, 3, 3, '2021-09-09 16:45:30', '2021-09-10 15:40:30', '50.00', '15.00', '30.00', '5.00', 'Solicito la cancelación del pedido pues El sistema me vendió algo que no deseaba', 'A', '2021-09-09 21:40:52', 1, NULL, NULL),
+(3, 6, 1, 3, 3, '2021-09-09 16:45:30', '2021-09-10 15:40:30', '50.00', '15.00', '30.00', '5.00', 'Solicito la cancelación del pedido pues El sistema me vendió algo que no deseaba', 'F', '2021-09-09 21:40:52', 1, NULL, NULL),
 (4, 3, 5, 1, 1, '2021-09-09 16:45:30', NULL, '10.56', '3.17', '6.33', '1.06', NULL, 'P', '2021-09-09 21:40:52', 5, NULL, NULL),
 (5, 5, 5, 1, 3, '2021-09-09 16:45:30', NULL, '200.00', '60.00', '120.00', '20.00', NULL, 'P', '2021-09-09 21:40:52', 5, NULL, NULL),
 (6, 6, 5, 3, 1, '2021-09-09 15:40:30', '2021-09-11 02:44:19', '50.00', '15.00', '30.00', '5.00', 'Falta información', 'X', '2021-09-09 21:40:52', 5, NULL, NULL),
@@ -237,13 +237,16 @@ INSERT INTO `pedidos` (`id`, `producto`, `cliente`, `cod_empresa`, `cod_repartid
 (21, 4, 13, 1, NULL, '2021-09-15 01:21:07', '2021-09-15 02:58:58', '45.00', '13.50', '27.00', '4.50', 'Demasiado Caro cambie de opinión, encontre mejores opciones', 'X', '2021-09-15 01:21:07', 13, NULL, NULL),
 (22, 4, 13, 1, NULL, '2021-09-15 01:22:33', '2021-09-15 01:34:57', '45.00', '13.50', '27.00', '4.50', 'Canceladisimo men', 'X', '2021-09-15 01:22:33', 13, NULL, NULL),
 (23, 4, 13, 1, NULL, '2021-09-15 02:00:37', '2021-09-15 21:25:12', '45.00', '13.50', '27.00', '4.50', 'el sistema fallo...', 'C', '2021-09-15 02:00:37', 13, NULL, NULL),
-(24, 4, 13, 1, NULL, '2021-09-15 02:03:29', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'P', '2021-09-15 02:03:29', 13, NULL, NULL),
+(24, 4, 13, 1, 18, '2021-09-15 02:03:29', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'F', '2021-09-15 02:03:29', 13, NULL, NULL),
 (25, 5, 13, 1, NULL, '2021-09-15 02:04:44', '2021-09-15 03:01:46', '200.00', '60.00', '120.00', '20.00', 'Por fi, si :3', 'X', '2021-09-15 02:04:44', 13, NULL, NULL),
-(26, 4, 13, 1, NULL, '2021-09-15 21:19:26', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'P', '2021-09-15 21:19:26', 13, NULL, NULL),
-(27, 4, 23, 1, NULL, '2021-09-15 21:27:46', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'P', '2021-09-15 21:27:46', 23, NULL, NULL),
-(28, 4, 13, 1, NULL, '2021-09-15 22:15:43', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'A', '2021-09-15 22:15:43', 13, NULL, NULL),
-(29, 6, 13, 3, NULL, '2021-09-15 23:15:14', NULL, '50.00', '15.00', '30.00', '5.00', NULL, 'P', '2021-09-15 23:15:14', 13, NULL, NULL),
-(30, 4, 13, 1, NULL, '2021-09-15 23:19:18', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'P', '2021-09-15 23:19:18', 13, NULL, NULL);
+(26, 4, 13, 1, 18, '2021-09-15 21:19:26', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'F', '2021-09-15 21:19:26', 13, NULL, NULL),
+(27, 4, 23, 1, 18, '2021-09-15 21:27:46', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'F', '2021-09-15 21:27:46', 23, NULL, NULL),
+(28, 4, 13, 1, NULL, '2021-09-15 22:15:43', '2021-09-16 15:27:04', '45.00', '13.50', '27.00', '4.50', 'quiero cancelar mi pedido', 'C', '2021-09-15 22:15:43', 13, NULL, NULL),
+(29, 6, 13, 3, 18, '2021-09-15 23:15:14', NULL, '50.00', '15.00', '30.00', '5.00', NULL, 'F', '2021-09-15 23:15:14', 13, NULL, NULL),
+(30, 4, 13, 1, NULL, '2021-09-15 23:19:18', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'F', '2021-09-15 23:19:18', 13, NULL, NULL),
+(31, 4, 13, 1, NULL, '2021-09-16 15:30:28', NULL, '45.00', '13.50', '27.00', '4.50', NULL, 'F', '2021-09-16 15:30:28', 13, NULL, NULL),
+(32, 10, 13, 9, NULL, '2021-09-16 16:05:04', '2021-09-16 16:06:06', '50.00', '15.00', '30.00', '5.00', 'no me gusta está feo', 'C', '2021-09-16 16:05:04', 13, NULL, NULL),
+(33, 11, 13, 1, 18, '2021-09-16 16:06:22', '2021-09-16 16:07:31', '50.00', '15.00', '30.00', '5.00', 'No quiero nada', 'X', '2021-09-16 16:06:22', 13, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -333,7 +336,11 @@ INSERT INTO `repartidores` (`cod_repartidor`, `cod_usuario`, `nombres`, `RUC`, `
 (13, 0, 'Repartidor10', '101641841826', 'repartidor3@correo.com', '0947787878', 'Lunes-viernes;11:00AM-19:00PM', 'Moto', '2021-09-14 23:23:23', 'P'),
 (14, 0, 'Repartidor11', '100621591878', 'repartidor4@correo.com', '0947787878', 'Lunes-viernes;12:00AM-20:00PM', 'Automóvil', '2021-09-14 23:23:23', 'P'),
 (15, 0, 'Repartidor12', '10162767421', 'repartidor5@correo.com', '0947787878', 'Lunes-viernes;13:00PM-21:00PM', 'Camión', '2021-09-14 23:23:23', 'P'),
-(16, 0, 'Repartidor13', '203954051939', 'repartidor6@correo.com', '0947787878', 'Lunes-viernes;8:00AM-16:00PM', 'Moto', '2021-09-14 23:23:23', 'P');
+(16, 0, 'Repartidor13', '203954051939', 'repartidor6@correo.com', '0947787878', 'Lunes-viernes;8:00AM-16:00PM', 'Moto', '2021-09-14 23:23:23', 'A'),
+(18, 18, 'CristhianRepartidor', '08748787484', 'cristhian_repartidor@gmail.com', '0874848748', 'Lunes,Martes,Miercoles,Jueves,Viernes;9:00-16:50', 'automovil', '2021-09-16 01:13:56', 'A'),
+(19, 19, 'asdasdas', '132123123', '1234@correo.cosdsd', 'asdas', 'Lunes,Jueves;7:0-8:0', '123123', '2021-09-16 01:14:32', 'X'),
+(20, 20, 'asdas', 'asdasdas', 'empresa2@empresa.com', 'asdasdasd', 'Lunes;6:2-7:2', 'asdasd', '2021-09-16 01:16:32', 'X'),
+(21, 21, 'Cristhian -NuevoRepartidor', '08748487484', 'repartidor12345@gmail.com', '08748487787', 'Lunes,Martes,Miercoles;7:50-17:30', 'carro', '2021-09-16 16:12:19', 'A');
 
 -- --------------------------------------------------------
 
@@ -359,7 +366,10 @@ INSERT INTO `resenia_clientes` (`id`, `cod_cliente`, `comentario`, `estrellas`, 
 (3, 23, '', '5', '2021-09-15 21:27:49'),
 (4, 13, '', '5', '2021-09-15 22:15:46'),
 (5, 13, '', '5', '2021-09-15 23:15:16'),
-(6, 13, '', '5', '2021-09-15 23:19:20');
+(6, 13, '', '5', '2021-09-15 23:19:20'),
+(7, 13, '', '5', '2021-09-16 15:30:31'),
+(8, 13, '', '5', '2021-09-16 16:05:06'),
+(9, 13, '', '5', '2021-09-16 16:06:24');
 
 -- --------------------------------------------------------
 
@@ -394,27 +404,30 @@ CREATE TABLE `users` (
   `password` varchar(30) NOT NULL,
   `cod_empresa` int(11) DEFAULT NULL,
   `tipo_usuario` char(1) DEFAULT NULL,
-  `created_at` datetime DEFAULT current_timestamp()
+  `created_at` datetime DEFAULT current_timestamp(),
+  `st_user` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Tabla de usuarios registrados';
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `cod_empresa`, `tipo_usuario`, `created_at`) VALUES
-(1, 'prueba', 'prueba@gmail.com', '12345', 1, 'E', '2021-08-28 12:04:00'),
-(2, 'daniela', 'daniela@gmail.com', '12345', NULL, 'A', '2021-08-28 12:05:55'),
-(3, 'dayan', 'dayan@correo.com', '12345', 4, 'E', '2021-09-08 20:55:27'),
-(4, 'felipe', 'felipe@correo.com', '12345', 5, 'E', '2021-09-08 20:55:27'),
-(5, 'cesar', 'cesar@correo.com', '12345', 3, 'E', '2021-09-08 20:55:27'),
-(6, 'rosalia', 'rosalia@correo.com', '12345', 6, 'E', '2021-09-08 20:55:27'),
-(8, 'anny', 'anny@correo.com', '12345', 9, 'E', '2021-09-11 14:29:38'),
-(9, 'romaria', 'romaria@correo.com', '12345', 10, 'E', '2021-09-14 18:42:41'),
-(10, 'josefa', 'josefa@correo.com', '12345', 11, 'E', '2021-09-14 21:03:18'),
-(11, 'prueba2', 'prueba2@correo.com', '12345', NULL, 'E', '2021-09-14 23:00:18'),
-(12, 'prueba3', 'prueba3@correo.com', '12345', NULL, 'E', '2021-09-14 23:05:56'),
-(13, 'prueba4', 'prueba4@correo.com', '12345', NULL, 'E', '2021-09-14 23:07:37'),
-(14, 'prueba5', 'prueba5@correo.com', '12345', NULL, 'E', '2021-09-14 23:07:46');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `cod_empresa`, `tipo_usuario`, `created_at`, `st_user`) VALUES
+(1, 'prueba', 'prueba@gmail.com', '12345', 1, 'E', '2021-08-28 12:04:00', NULL),
+(2, 'daniela', 'daniela@gmail.com', '12345', NULL, 'A', '2021-08-28 12:05:55', NULL),
+(3, 'dayan', 'dayan@correo.com', '12345', 4, 'E', '2021-09-08 20:55:27', NULL),
+(4, 'felipe', 'felipe@correo.com', '12345', 5, 'E', '2021-09-08 20:55:27', NULL),
+(5, 'cesar', 'cesar@correo.com', '12345', 3, 'E', '2021-09-08 20:55:27', NULL),
+(6, 'rosalia', 'rosalia@correo.com', '12345', 6, 'E', '2021-09-08 20:55:27', NULL),
+(8, 'anny', 'anny@correo.com', '12345', 9, 'E', '2021-09-11 14:29:38', NULL),
+(9, 'romaria', 'romaria@correo.com', '12345', 10, 'E', '2021-09-14 18:42:41', NULL),
+(10, 'josefa', 'josefa@correo.com', '12345', 11, 'E', '2021-09-14 21:03:18', NULL),
+(11, 'prueba2', 'prueba2@correo.com', '12345', NULL, 'E', '2021-09-14 23:00:18', NULL),
+(12, 'prueba3', 'prueba3@correo.com', '12345', NULL, 'E', '2021-09-14 23:05:56', NULL),
+(13, 'prueba4', 'prueba4@correo.com', '12345', NULL, 'E', '2021-09-14 23:07:37', NULL),
+(14, 'prueba5', 'prueba5@correo.com', '12345', NULL, 'E', '2021-09-14 23:07:46', NULL),
+(18, 'MiusuarioRepartidor', 'cristhian_repartidor@gmail.com', '12345', NULL, 'R', '2021-09-16 01:13:56', 'A'),
+(21, 'MinuevoRepartidor', 'repartidor12345@gmail.com', '12345', NULL, 'R', '2021-09-16 16:12:18', 'A');
 
 --
 -- Índices para tablas volcadas
@@ -529,7 +542,7 @@ ALTER TABLE `horarios`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -541,13 +554,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `repartidores`
 --
 ALTER TABLE `repartidores`
-  MODIFY `cod_repartidor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `cod_repartidor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `resenia_clientes`
 --
 ALTER TABLE `resenia_clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_empresa`
@@ -559,7 +572,7 @@ ALTER TABLE `tipo_empresa`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
