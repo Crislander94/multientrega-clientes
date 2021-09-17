@@ -53,14 +53,20 @@ const getProductsByCategory = (element) => {
             const {codigo, data} = response;
             if(codigo === 200){
                 listProducts.innerHTML = '';
-                title_main_products.innerHTML = 'Categoria de la lista: '+ data[0].nombreCategoria;
-                data.forEach(producto => {
-                    const {nom_producto,nombreCategoria,precio,ofertas,cod_empresa, id} = producto;
-                    let new_nombreCat = (nombreCategoria === 'Inmuebles o propiedades') ? 'Inmuebles' : nombreCategoria;
-                    const {ruta_img} = imagenes[new_nombreCat];
-                    listProducts.innerHTML += renderProducts(nom_producto,ruta_img,precio,ofertas,cod_empresa,id);
-                });
+                title_main_products.innerHTML = 'Categoria de la lista: '+ nom_cateogria;
+                if(data != null){
+                    data.forEach(producto => {
+                        const {nom_producto,nombreCategoria,precio,ofertas,cod_empresa, id} = producto;
+                        let new_nombreCat = (nombreCategoria === 'Inmuebles o propiedades') ? 'Inmuebles' : nombreCategoria;
+                        const {ruta_img} = imagenes[new_nombreCat];
+                        listProducts.innerHTML += renderProducts(nom_producto,ruta_img,precio,ofertas,cod_empresa,id);
+                    });
+                }else{
+                    title_main_products.innerHTML = 'Categoria de la lista: '+ nom_cateogria;
+                    listProducts.innerHTML = notFound();
+                }
             }else{
+                title_main_products.innerHTML = 'Categoria de la lista: '+ nom_cateogria;
                 listProducts.innerHTML = notFound();
             }
         }
