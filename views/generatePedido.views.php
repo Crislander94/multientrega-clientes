@@ -62,6 +62,7 @@
             direccion();
         } 
         if(element.value === 'N'){
+            $('#direccion').html('');
             direccion_actual.style.display ="block";
         } 
     }
