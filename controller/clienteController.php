@@ -64,6 +64,7 @@
         }
 
         public function createResenia($conexion){
+            require_once 'verificar.php';
             require_once 'models/clienteModel.php';
             $cliente = new clienteModels($conexion);
             $estrellas = $_POST["estrellas"];
@@ -80,6 +81,7 @@
         
         
         public function tracking($conexion){
+            require_once 'verificar.php';
             require_once 'models/clienteModel.php';
             $cliente = new clienteModels($conexion);
             $cod_cliente = $_SESSION["cod_cliente"];
